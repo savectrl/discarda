@@ -1,8 +1,8 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { HashRouter, Route } from 'react-router-dom';
-import { createTheme, adaptV4Theme } from '@mui/material/styles';
-import { ThemeProvider, Theme, StyledEngineProvider } from '@mui/styles';
+import { createTheme } from '@material-ui/core/styles';
+import { ThemeProvider, Theme, StylesProvider } from '@material-ui/core/styles';
 
 import './App.css';
 import Dashboard from '../Dashboard/Dashboard';
@@ -12,14 +12,14 @@ import createHashHistory from '../../history';
 
 
 
-declare module '@mui/styles/defaultTheme' {
+declare module '@material-ui/styles/defaultTheme' {
   // eslint-disable-next-line @typescript-eslint/no-empty-interface
   interface DefaultTheme extends Theme {}
 }
 
 
 
-declare module '@mui/styles/defaultTheme' {
+declare module '@material-ui/styles/defaultTheme' {
   // eslint-disable-next-line @typescript-eslint/no-empty-interface
   interface DefaultTheme extends Theme {}
 }
@@ -40,7 +40,7 @@ function App() {
   };
 
   return (
-    <StyledEngineProvider injectFirst>
+    <StylesProvider injectFirst>
       <ThemeProvider theme={theme}>
         <HashRouter>
           {checkLocalStorageAuth()}
@@ -48,13 +48,13 @@ function App() {
           <Route path="/" exact component={Auth} />
         </HashRouter>
       </ThemeProvider>
-    </StyledEngineProvider>
+    </StylesProvider>
   );
 }
 
 export default App;
 
-const theme = createTheme(adaptV4Theme({
+const theme = createTheme({
   overrides: {
     MuiTooltip: {
       tooltip: {
@@ -76,7 +76,7 @@ const theme = createTheme(adaptV4Theme({
     }
   },
   palette: {
-    mode: 'dark',
+    type: 'dark',
     primary: {
       main: '#7289da'
     },
@@ -91,4 +91,4 @@ const theme = createTheme(adaptV4Theme({
     fontWeightRegular: 500,
     fontWeightMedium: 600
   }
-}));
+});
