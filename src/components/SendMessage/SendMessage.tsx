@@ -1,10 +1,10 @@
 import React, { useState, useEffect, ChangeEvent } from 'react';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
-import TextareaAutosize from '@mui/material/TextareaAutosize';
+import TextareaAutosize from '@material-ui/utils';
 import 'emoji-mart/css/emoji-mart.css';
 import { Picker } from 'emoji-mart';
-import SmileyFace from '@mui/icons-material/SentimentVerySatisfied';
+import SmileyFace from '@material-ui/icons';
 import { StoreState } from '../../reducers';
 import { sendMessage, sendPrivateMessage } from '../../actions';
 import { SendMessageData, SendPrivateMessageData } from '../../actions/types';
@@ -100,8 +100,8 @@ export default function SendMessage() {
           placeholder={`Message  #${placeholderTitle}`}
           className="message-text-area"
           value={chatMessage}
-          onChange={e => handleOnChange(e)}
-          onKeyPress={e => handleKeyPress(e)}
+          onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => handleOnChange(e)}
+          onKeyPress={(e: any) => handleKeyPress(e)}
         />
         <SmileyFace className="send-message-emoji-button" onClick={() => setEmojiMenuVisible(!emojiMenuVisible)} />
       </div>
