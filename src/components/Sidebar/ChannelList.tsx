@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Person, MoreVert, Settings } from '@material-ui/icons';
+import { Person, MoreVert, Settings } from '@mui/icons-material';
 import {
   List,
   ListItem,
@@ -13,7 +13,7 @@ import {
   MenuItem,
   Slide,
   Button
-} from '@material-ui/core';
+} from '@mui/material';
 import {
   changeChannel,
   signOut,
@@ -338,7 +338,7 @@ export default function ChannelList(props: ChannelListProps) {
           {isAdmin ? (
             <React.Fragment>
               <Tooltip title="Server Settings" key="server-settings" placement="right" className="tooltip">
-                <IconButton onClick={e => handleSettingsClick(e, 'server')}>
+                <IconButton onClick={e => handleSettingsClick(e, 'server')} size="large">
                   {' '}
                   <MoreVert />{' '}
                 </IconButton>
@@ -360,7 +360,7 @@ export default function ChannelList(props: ChannelListProps) {
               </Typography>
               {isAdmin ? (
                 <Tooltip title="Server Settings" key="server-settings" placement="right" className="tooltip">
-                  <IconButton onClick={e => handleSettingsClick(e, 'channel')}>
+                  <IconButton onClick={e => handleSettingsClick(e, 'channel')} size="large">
                     {' '}
                     <Settings className="channel-settings" />{' '}
                   </IconButton>

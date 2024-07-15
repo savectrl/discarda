@@ -1,5 +1,5 @@
 import React from 'react'
-import { Snackbar } from '@material-ui/core';
+import { Snackbar } from '@mui/material';
 
 // Snackbar that allows you to set the content, visibility 
 // and change visibility from parent component
@@ -22,7 +22,8 @@ export default function SnackBarContent(props) {
         vertical: 'bottom',
         horizontal: 'left'
       }}
-      onEntered={() => handleSnackBarOpen()}
-    />
-  )
+      TransitionProps={{
+        onEntered: () => handleSnackBarOpen()
+      }} />
+  );
 }

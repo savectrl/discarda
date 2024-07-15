@@ -1,8 +1,8 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { GroupWork, AddCircleOutline, Home } from '@material-ui/icons';
-import { List, Tooltip, IconButton } from '@material-ui/core';
+import { GroupWork, AddCircleOutline, Home } from '@mui/icons-material';
+import { List, Tooltip, IconButton } from '@mui/material';
 import { changeServer, changeView } from '../../actions';
 import { StoreState } from '../../reducers';
 
@@ -41,7 +41,10 @@ export default function ServerList(props: ServerListProps) {
     <div className="servers-container">
       <List>
         <Tooltip title="Home" key="home" placement="right" className="tooltip">
-          <IconButton className="home-icon" onClick={() => handleChangeView('home')}>
+          <IconButton
+            className="home-icon"
+            onClick={() => handleChangeView('home')}
+            size="large">
             <Home />
           </IconButton>
         </Tooltip>
@@ -52,14 +55,17 @@ export default function ServerList(props: ServerListProps) {
             <IconButton
               className="server-icon"
               onClick={() => handleChangeView('servers', () => handleServerChange(server))}
-            >
+              size="large">
               <GroupWork />
             </IconButton>
           </Tooltip>
         ))}
 
         <Tooltip title="Create Server" key="create-server" placement="right" className="tooltip">
-          <IconButton className="server-icon" onClick={() => handleChangeView('servers', () => handleModalShow())}>
+          <IconButton
+            className="server-icon"
+            onClick={() => handleChangeView('servers', () => handleModalShow())}
+            size="large">
             <AddCircleOutline />
           </IconButton>
         </Tooltip>

@@ -11,8 +11,8 @@ import {
   Slide,
   TextField,
   Grid
-} from '@material-ui/core';
-import { GroupAdd, AddToQueue } from '@material-ui/icons';
+} from '@mui/material';
+import { GroupAdd, AddToQueue } from '@mui/icons-material';
 import axios from '../Api/api';
 
 import { addChannel, addServer } from '../../actions';
@@ -157,7 +157,7 @@ export default function ActionsModal(props: ActionsModalProps) {
   const renderMainServer = () => {
     return (
       <Slide direction={mainDirection} in={mainVisible} timeout={500} mountOnEnter unmountOnExit>
-        <Grid container spacing={3} justify="center" alignItems="center">
+        <Grid container spacing={3} justifyContent="center" alignItems="center">
           <Grid item xs={12}>
             <Typography variant="h5" color="primary" align="center">
               Another server? Wow you're popular!
@@ -212,7 +212,7 @@ export default function ActionsModal(props: ActionsModalProps) {
   const renderServerCreate = () => {
     return (
       <Slide direction={createDirection} in={createVisible} mountOnEnter unmountOnExit timeout={500}>
-        <Grid container spacing={3} justify="center" alignItems="center">
+        <Grid container spacing={3} justifyContent="center" alignItems="center">
           <Grid item xs={12}>
             <Typography variant="h5" color="primary" align="center">
               Create a Server!
@@ -253,7 +253,7 @@ export default function ActionsModal(props: ActionsModalProps) {
   const renderServerRename = () => {
     return (
       <Slide direction="left" in={true} mountOnEnter unmountOnExit timeout={500}>
-        <Grid container spacing={3} justify="center" alignItems="center">
+        <Grid container spacing={3} justifyContent="center" alignItems="center">
           <Grid item xs={12}>
             <Typography variant="h5" color="primary" align="center">
               Rename Server
@@ -294,7 +294,7 @@ export default function ActionsModal(props: ActionsModalProps) {
   const renderServerDelete = () => {
     return (
       <Slide direction="left" in={true} mountOnEnter unmountOnExit timeout={500}>
-        <Grid container spacing={3} justify="center" alignItems="center">
+        <Grid container spacing={3} justifyContent="center" alignItems="center">
           <Grid item xs={12}>
             <Typography variant="h5" color="primary" align="center">
               Delete Server
@@ -335,7 +335,7 @@ export default function ActionsModal(props: ActionsModalProps) {
   const renderServerJoin = () => {
     return (
       <Slide direction={joinDirection} in={joinVisible} mountOnEnter unmountOnExit timeout={500}>
-        <Grid container spacing={3} justify="center" alignItems="center">
+        <Grid container spacing={3} justifyContent="center" alignItems="center">
           <Grid item xs={12}>
             <Typography variant="h5" color="primary" align="center">
               Join a Server!
@@ -376,7 +376,7 @@ export default function ActionsModal(props: ActionsModalProps) {
   const renderChannelCreate = () => {
     return (
       <Slide direction="left" in={true} mountOnEnter unmountOnExit timeout={500}>
-        <Grid container spacing={3} justify="center" alignItems="center">
+        <Grid container spacing={3} justifyContent="center" alignItems="center">
           <Grid item xs={12}>
             <Typography variant="h5" color="primary" align="center">
               Create a Channel!
@@ -417,7 +417,7 @@ export default function ActionsModal(props: ActionsModalProps) {
   const renderChannelRename = () => {
     return (
       <Slide direction="left" in={true} mountOnEnter unmountOnExit timeout={500}>
-        <Grid container spacing={3} justify="center" alignItems="center">
+        <Grid container spacing={3} justifyContent="center" alignItems="center">
           <Grid item xs={12}>
             <Typography variant="h5" color="primary" align="center">
               Rename Chanel
@@ -458,7 +458,7 @@ export default function ActionsModal(props: ActionsModalProps) {
   const renderChannelDelete = () => {
     return (
       <Slide direction="left" in={true} mountOnEnter unmountOnExit timeout={500}>
-        <Grid container spacing={3} justify="center" alignItems="center">
+        <Grid container spacing={3} justifyContent="center" alignItems="center">
           <Grid item xs={12}>
             <Typography variant="h5" color="primary" align="center">
               Delete Channel

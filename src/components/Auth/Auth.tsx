@@ -13,8 +13,8 @@ import {
   Grid,
   IconButton,
   Checkbox
-} from '@material-ui/core';
-import { GroupAdd, Person, ArrowBack } from '@material-ui/icons';
+} from '@mui/material';
+import { GroupAdd, Person, ArrowBack } from '@mui/icons-material';
 import axios from '../Api/api';
 
 import createHashHistory from '../../history';
@@ -149,7 +149,7 @@ export default function Auth() {
   const renderMain = () => {
     return (
       <Slide direction={mainDirection} in={mainVisible} timeout={350} mountOnEnter unmountOnExit>
-        <Grid container spacing={3} justify="center" alignItems="center">
+        <Grid container spacing={3} justifyContent="center" alignItems="center">
           <Grid item sm={12} xs={12}>
             <Typography variant="h5" color="primary" align="center">
               Create an account, or sign in!
@@ -204,9 +204,9 @@ export default function Auth() {
   const renderCreateAccount = () => {
     return (
       <Slide direction={createDirection} in={createVisible} timeout={350} mountOnEnter unmountOnExit>
-        <Grid container spacing={1} justify="center" alignItems="center">
+        <Grid container spacing={1} justifyContent="center" alignItems="center">
           <Grid item xs={12}>
-            <IconButton onClick={showMain}>
+            <IconButton onClick={showMain} size="large">
               <ArrowBack />
             </IconButton>
             <Typography variant="h5" color="primary" align="center">
@@ -276,9 +276,9 @@ export default function Auth() {
   const renderLoginAccount = () => {
     return (
       <Slide direction={loginDirection} in={loginVisible} timeout={350} mountOnEnter unmountOnExit>
-        <Grid container spacing={2} justify="center" alignItems="center">
+        <Grid container spacing={2} justifyContent="center" alignItems="center">
           <Grid item xs={12}>
-            <IconButton onClick={showMain}>
+            <IconButton onClick={showMain} size="large">
               <ArrowBack />
             </IconButton>
             <Typography variant="h5" color="primary" align="center">

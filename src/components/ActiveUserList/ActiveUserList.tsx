@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { List, ListItem, ListItemAvatar, Avatar, ListItemText, Popover } from '@material-ui/core';
+import { List, ListItem, ListItemAvatar, Avatar, ListItemText, Popover } from '@mui/material';
 import { useSelector } from 'react-redux';
 import UserInfo from '../UserInfo/UserInfo';
 import { StoreState } from '../../reducers';
