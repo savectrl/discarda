@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { GroupWork, AddCircleOutline, Home } from '@mui/icons-material';
-import { List, Tooltip, IconButton } from '@mui/material';
+import { List, Tooltip, IconButton } from '@material-ui/core';
 import { changeServer, changeView } from '../../actions';
 import { StoreState } from '../../reducers';
 
