@@ -1,6 +1,6 @@
 import React from 'react';
 import { List, ListItem, ListItemAvatar, Avatar, ListItemText, Slide, Button, Typography } from '@mui/material';
-import { Person } from '@mui/icons-material';
+import { Person } from '@material-ui/icons';
 import { useSelector, useDispatch } from 'react-redux';
 import { signOut, changePMUser } from '../../actions';
 import { StoreState } from '../../reducers';
