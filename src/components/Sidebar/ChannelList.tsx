@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Person, MoreVert, Settings } from '@mui/icons-material';
+import { Person, MoreVert, Settings } from '@material-ui/icons';
 import {
   List,
   ListItem,
