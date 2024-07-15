@@ -177,7 +177,7 @@ export default function Messages() {
                           }
                           secondary={
                             <pre className="prettyprint">
-                              <div dangerouslySetInnerHTML={{ __html: DomPurify.sanitize(formatCode((message.msg)) }}></div>
+                              <div dangerouslySetInnerHTML={{ __html: DomPurify.sanitize(formatCode(message.msg))}}></div>
                             </pre>
                           }
                           className="message-text"
