@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { Card, Typography, TextField } from '@mui/material';
-import makeStyles from '@mui/styles/makeStyles';
+import { Card, Typography, TextField } from '@material-ui/core';
+import makeStyles from '@material-ui/styles/makeStyles';
 import { sendPrivateMessage, changeView, changePMUser } from '../../actions';
 
 const useStyle = makeStyles(theme => ({

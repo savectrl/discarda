@@ -1,5 +1,5 @@
 import React from 'react'
-import { Snackbar } from '@mui/material';
+import { Snackbar } from '@material-ui/core';
 
 // Snackbar that allows you to set the content, visibility 
 // and change visibility from parent component

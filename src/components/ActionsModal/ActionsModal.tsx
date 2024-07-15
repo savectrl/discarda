@@ -11,8 +11,8 @@ import {
   Slide,
   TextField,
   Grid
-} from '@mui/material';
-import { GroupAdd, AddToQueue } from '@mui/icons-material';
+} from '@material-ui/core';
+import { GroupAdd, AddToQueue } from '@material-ui/icons';
 import axios from '../Api/api';
 
 import { addChannel, addServer } from '../../actions';
@@ -69,7 +69,7 @@ export default function ActionsModal(props: ActionsModalProps) {
         response.data.server.split('-')[1]
       } created`;
       handleSnackMessage(message, false);
-    } catch (err) {
+    } catch (err: any) {
       handleSnackMessage(err.response.data, false);
     }
   };
@@ -79,7 +79,7 @@ export default function ActionsModal(props: ActionsModalProps) {
     try {
       const response = await axios.post(`/server/join?serverId=${serverId}&userId=${userId}`);
       handleSnackMessage(response.data, true);
-    } catch (err) {
+    } catch (err: any) {
       handleSnackMessage(err.response.data, false);
     }
   };
@@ -91,7 +91,7 @@ export default function ActionsModal(props: ActionsModalProps) {
         `/server/rename?serverName=${serverName}&serverId=${serverId}&userId=${userId}`
       );
       handleSnackMessage(response.data, true);
-    } catch (err) {
+    } catch (err: any) {
       handleSnackMessage(err.response.data, false);
     }
   };
@@ -101,7 +101,7 @@ export default function ActionsModal(props: ActionsModalProps) {
     try {
       const response = await axios.delete(`/server/delete?serverId=${serverId}&userId=${userId}`);
       handleSnackMessage(response.data, true);
-    } catch (err) {
+    } catch (err: any) {
       handleSnackMessage(err.response.data, false);
     }
   };
@@ -115,7 +115,7 @@ export default function ActionsModal(props: ActionsModalProps) {
         '-'[1]
       )} created`;
       handleSnackMessage(message, false);
-    } catch (err) {
+    } catch (err: any) {
       handleSnackMessage(err.response.data, false);
     }
   };
@@ -129,7 +129,7 @@ export default function ActionsModal(props: ActionsModalProps) {
         }&userId=${userId}`
       );
       handleSnackMessage(response.data, true);
-    } catch (err) {
+    } catch (err: any) {
       handleSnackMessage(err.response.data, false);
     }
   };
@@ -141,7 +141,7 @@ export default function ActionsModal(props: ActionsModalProps) {
         `/channel/delete?channelId=${channelId}&serverId=${activeServer.split('-')[1]}&userId=${userId}`
       );
       handleSnackMessage(response.data, true);
-    } catch (err) {
+    } catch (err: any) {
       handleSnackMessage(err.response.data, false);
     }
   };
