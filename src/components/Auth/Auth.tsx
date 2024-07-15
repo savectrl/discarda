@@ -13,8 +13,8 @@ import {
   Grid,
   IconButton,
   Checkbox
-} from '@mui/material';
-import { GroupAdd, Person, ArrowBack } from '@mui/icons-material';
+} from '@material-ui/core';
+import { GroupAdd, Person, ArrowBack } from '@material-ui/icons';
 import axios from '../Api/api';
 
 import createHashHistory from '../../history';
@@ -108,8 +108,8 @@ export default function Auth() {
       }
       dispatch(signIn(response.data));
       createHashHistory.push('/dashboard');
-    } catch (err) {
-      const errorData = err.response.data;
+    } catch (err: any) {
+      let errorData = err.response.data;
       if (errorData) {
         setUserNameError(true);
         setUserNameErrorMsg(errorData);
@@ -134,7 +134,7 @@ export default function Auth() {
       }
       dispatch(signIn(response.data));
       createHashHistory.push('/dashboard');
-    } catch (err) {
+    } catch (err: any) {
       const errorData = err.response.data;
       if (errorData) {
         setUserNameError(true);
@@ -206,7 +206,7 @@ export default function Auth() {
       <Slide direction={createDirection} in={createVisible} timeout={350} mountOnEnter unmountOnExit>
         <Grid container spacing={1} justifyContent="center" alignItems="center">
           <Grid item xs={12}>
-            <IconButton onClick={showMain} size="large">
+            <IconButton onClick={showMain} size="medium">
               <ArrowBack />
             </IconButton>
             <Typography variant="h5" color="primary" align="center">
@@ -278,7 +278,7 @@ export default function Auth() {
       <Slide direction={loginDirection} in={loginVisible} timeout={350} mountOnEnter unmountOnExit>
         <Grid container spacing={2} justifyContent="center" alignItems="center">
           <Grid item xs={12}>
-            <IconButton onClick={showMain} size="large">
+            <IconButton onClick={showMain} size="medium">
               <ArrowBack />
             </IconButton>
             <Typography variant="h5" color="primary" align="center">
