@@ -11,7 +11,7 @@ import {
   CircularProgress
 } from '@material-ui/core';
 import moment from 'moment';
-import DOMPurify from 'dompurify';
+import DOMPurify from 'isomorphic-dompurify';
 //import Code from 'react-code-prettify';
 import UserInfo from '../UserInfo/UserInfo';
 import { StoreState } from '../../reducers';
