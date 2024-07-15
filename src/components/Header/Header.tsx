@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
-import { SwipeableDrawer, SvgIcon, Link, Tooltip } from '@mui/material';
+import AppBar from '@material-ui/styles';
+import Toolbar from '@material-ui/styles';
+import Typography from '@material-ui/styles';
+import IconButton from '@material-ui/styles';
+import MenuIcon from '@material-ui/styles';
+import { SwipeableDrawer, SvgIcon, Link, Tooltip } from '@material-ui/core';
 
 import Sidebar from '../Sidebar/Sidebar';
 import ActiveUserList from '../ActiveUserList/ActiveUserList';
