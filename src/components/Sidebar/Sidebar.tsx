@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Modal } from '@mui/material';
+import { Modal } from '@material-ui/core';
 
 import SnackBarContent from '../SnackBar/SnackBarContent';
 import PrivateMessageUserList from './PrivateMessageUserList';
